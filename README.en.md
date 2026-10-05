@@ -55,7 +55,7 @@ No invented metrics — just mechanisms, each verifiable in a single conversatio
 
 ## Sister skill: thinking-models
 
-This skill pairs with [thinking-models](https://github.com/Mihooni/thinking-models) (mental model analysis system) as a complementary set:
+This skill pairs with [thinking-models](https://github.com/Hoodas101/thinking-models) (mental model analysis system) as a complementary set:
 
 | | bias-correction (this skill) | thinking-models |
 |---|---|---|
@@ -67,11 +67,22 @@ The two share interoperable numbering (e.g., Sunk Cost = BC#29 = TM#1), compatib
 
 ## Installation
 
-### Claude Code (macOS/Linux)
+**One command (macOS / Linux, recommended)**
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Hoodas101/bias-correction/main/install.sh | bash
+```
+
+Restart Claude Code, then try: "Check this judgement of mine for cognitive biases".
+
+<details>
+<summary>No curl? Windows / Cursor / Codex / manual install → expand</summary>
+
+### Claude Code (macOS / Linux, manual)
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/Mihooni/bias-correction.git ~/.cc-switch/skills/bias-correction
+git clone https://github.com/Hoodas101/bias-correction.git ~/.cc-switch/skills/bias-correction
 
 # 2. Create a symlink to mount
 ln -s ~/.cc-switch/skills/bias-correction ~/.claude/skills/bias-correction
@@ -82,7 +93,7 @@ ln -s ~/.cc-switch/skills/bias-correction ~/.claude/skills/bias-correction
 ### Claude Code (Windows)
 
 ```powershell
-git clone https://github.com/Mihooni/bias-correction.git %USERPROFILE%\.cc-switch\skills\bias-correction
+git clone https://github.com/Hoodas101/bias-correction.git %USERPROFILE%\.cc-switch\skills\bias-correction
 cmd /c mklink /D %USERPROFILE%\.claude\skills\bias-correction %USERPROFILE%\.cc-switch\skills\bias-correction
 ```
 
@@ -101,6 +112,8 @@ cp ~/.cc-switch/skills/bias-correction/AGENTS.md /path/to/your/project/AGENTS.md
 1. Download and unzip this repo
 2. Put the `bias-correction` folder anywhere
 3. Create a symlink pointing to it (see the commands above)
+
+</details>
 
 ## File structure
 
@@ -236,9 +249,12 @@ This skill is free and open source (MIT). If it helped you avoid a costly misjud
   <img src="docs/donate-alipay.jpg" alt="Alipay" width="220">
 </p>
 
+- **Overseas / GitHub Sponsors**: [github.com/sponsors/Hoodas101](https://github.com/sponsors/Hoodas101) (credit cards supported)
+- Or drop a ⭐ Star — it helps others find this, which matters just as much for an open-source project
+
 **Elsewhere in the world?** These QR codes need a WeChat or Alipay account with a mainland
-bank card, so they won't work for everyone. An international option (card / PayPal) is on the
-way — until then, a ⭐ star or a bug report helps this project more than you might think.
+bank card, so they won't work for everyone. Overseas readers can use the **GitHub Sponsors**
+link above; beyond that, a ⭐ star or a bug report helps this project more than you might think.
 ## License
 
 MIT

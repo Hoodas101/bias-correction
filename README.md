@@ -55,7 +55,7 @@
 
 ## 与 thinking-models 的关系
 
-| | bias-correction（本 skill） | [thinking-models](https://github.com/Mihooni/thinking-models) |
+| | bias-correction（本 skill） | [thinking-models](https://github.com/Hoodas101/thinking-models) |
 |---|---|---|
 | 定位 | **哪里会出错**——防错护栏 | **怎么做更好**——分析工具箱 |
 | 内容 | 39 偏误 + 纠正方法 | 66 思维模型 + 匹配表 |
@@ -65,11 +65,22 @@
 
 ## 安装
 
-### Claude Code（macOS/Linux）
+**一条命令（macOS / Linux，推荐）**
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Hoodas101/bias-correction/main/install.sh | bash
+```
+
+装完重启 Claude Code，试试说："帮我检查一下这个判断有没有认知偏误"。
+
+<details>
+<summary>不用 curl？Windows / Cursor / Codex / 手工安装 → 点开</summary>
+
+### Claude Code（macOS / Linux，手工）
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/Mihooni/bias-correction.git ~/.cc-switch/skills/bias-correction
+git clone https://github.com/Hoodas101/bias-correction.git ~/.cc-switch/skills/bias-correction
 
 # 2. 创建 symlink 挂载
 ln -s ~/.cc-switch/skills/bias-correction ~/.claude/skills/bias-correction
@@ -80,7 +91,7 @@ ln -s ~/.cc-switch/skills/bias-correction ~/.claude/skills/bias-correction
 ### Claude Code（Windows）
 
 ```powershell
-git clone https://github.com/Mihooni/bias-correction.git %USERPROFILE%\.cc-switch\skills\bias-correction
+git clone https://github.com/Hoodas101/bias-correction.git %USERPROFILE%\.cc-switch\skills\bias-correction
 cmd /c mklink /D %USERPROFILE%\.claude\skills\bias-correction %USERPROFILE%\.cc-switch\skills\bias-correction
 ```
 
@@ -99,6 +110,8 @@ cp ~/.cc-switch/skills/bias-correction/AGENTS.md /path/to/your/project/AGENTS.md
 1. 下载本仓库 ZIP 并解压
 2. 将 `bias-correction` 文件夹放到任意位置
 3. 按上方命令创建 symlink
+
+</details>
 
 ## 文件结构
 
@@ -234,9 +247,11 @@ Cursor/Codex/Cline/Continue 复制 `AGENTS.md` 到项目根目录——协议同
   <img src="docs/donate-alipay.jpg" alt="支付宝打赏" width="220">
 </p>
 
+- **海外 / GitHub Sponsors**：[github.com/sponsors/Hoodas101](https://github.com/sponsors/Hoodas101)（支持信用卡）
+- 也可以点一个 ⭐ Star，让更多需要它的人看到——这对开源项目同样重要
+
 **中国大陆以外？** 这两个码需要绑定大陆银行卡的微信 / 支付宝，海外朋友多半扫不了。
-国际支付通道（信用卡 / PayPal）正在接入；在那之前，点个 ⭐ Star 或提个 Issue，
-对项目的帮助比想象中大。
+海外读者可用上方 **GitHub Sponsors**；此外点个 ⭐ Star 或提个 Issue，对项目的帮助比想象中大。
 ## License
 
 MIT
